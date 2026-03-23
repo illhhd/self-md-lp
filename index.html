@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>self.md | 考えはある。でも、伝わっていない。</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface": "#1A1A1A",
+          "on-surface-variant": "#4A4A4A",
+          "surface": "#FCFCFC",
+          "surface-dim": "#dbdad9",
+          "surface-container-low": "#f6f6f6",
+          "surface-container": "#f0eded",
+          "surface-container-high": "#eae8e7",
+          "surface-container-highest": "#e4e2e2",
+          "surface-container-lowest": "#ffffff",
+          "surface-bright": "#fcf9f8",
+          "primary": "#0A2540",
+          "primary-dim": "#081d33",
+          "primary-container": "#e6ebf1",
+          "on-primary": "#ffffff",
+          "outline": "#7b7b7a",
+          "outline-variant": "#b2b2b1",
+          "background": "#FCFCFC",
+          "on-background": "#1A1A1A",
+        },
+        fontFamily: {
+          "headline": ["Inter", "Noto Sans JP"],
+          "body": ["Inter", "Noto Sans JP"],
+          "label": ["Inter", "Noto Sans JP"],
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .svg-illustration { filter: drop-shadow(0 4px 6px rgba(10, 37, 64, 0.05)); }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+
+<!-- ===== TopNavBar (Glassmorphism) ===== -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-primary/5 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center h-20 px-8">
+    <div class="text-xl font-extrabold tracking-tighter text-primary">self.md</div>
+    <div class="hidden md:flex gap-10 items-center">
+      <a class="text-on-surface/70 hover:text-primary transition-colors font-medium text-sm tracking-tight" href="#about">Product</a>
+      <a class="text-on-surface/70 hover:text-primary transition-colors font-medium text-sm tracking-tight" href="#process">Process</a>
+      <a class="text-on-surface/70 hover:text-primary transition-colors font-medium text-sm tracking-tight" href="#for-whom">For Whom</a>
+      <a class="cta-nav bg-primary text-on-primary px-6 py-2.5 rounded-full font-medium text-sm tracking-tight hover:opacity-90 active:scale-[0.98] transition-all" href="#cta">無料診断を受ける</a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-20">
+
+<!-- ===== HERO ===== -->
+<section class="min-h-[90vh] flex flex-col justify-center px-8 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto w-full grid md:grid-cols-[1.2fr_0.8fr] items-center gap-16">
+    <div class="z-10">
+      <span class="inline-block px-4 py-1 mb-8 border border-primary/10 rounded-full text-[10px] uppercase tracking-[0.2em] font-semibold text-primary/60">Self-Awareness as Infrastructure</span>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.05] text-on-surface mb-12">
+        考えはある。<br />でも、伝わって<br class="hidden lg:block" />いない。
+      </h1>
+      <p class="text-xl text-on-surface-variant leading-relaxed max-w-xl mb-12">
+        経営者の頭の中にある「言語化されていない確信」を整理し、会議・採用・提案で"そのまま使える形"に変えるサービス。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#cta" class="bg-primary text-on-primary px-10 py-5 rounded-full text-base font-bold tracking-tight hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 text-center">
+          無料ギャップ診断を受ける
+        </a>
+        <a href="#about" class="px-10 py-5 rounded-full border border-primary/10 text-on-surface font-semibold hover:bg-surface-container-low transition-all text-center">
+          サービスを知る
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:block relative">
+      <div class="relative w-full aspect-square flex items-center justify-center">
+        <svg class="w-full h-full text-primary/5" viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="180" fill="none" stroke="currentColor" stroke-dasharray="8 8" stroke-width="1" />
+          <circle cx="200" cy="200" r="120" fill="none" stroke="currentColor" stroke-width="1" />
+          <circle cx="200" cy="200" r="60" fill="currentColor" opacity="0.1" />
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-32 h-32 bg-white rounded-3xl shadow-2xl flex items-center justify-center transform -rotate-12 border border-primary/5">
+            <span class="material-symbols-outlined text-primary text-5xl">psychology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="py-32 px-8 bg-surface-container-low/50">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-24 max-w-3xl">
+      <span class="uppercase tracking-widest text-primary font-bold block mb-4 text-xs">Problem</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface leading-tight">
+        あなたは説明している。<br />でも、届いていない。
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="p-8 bg-white border border-primary/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">groups</span>
+        <h3 class="text-lg font-bold mb-4">社員</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">理念を語っているつもりが、「結局何を優先すればいいのか」が伝わっていない。</p>
+      </div>
+      <div class="p-8 bg-white border border-primary/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">person_search</span>
+        <h3 class="text-lg font-bold mb-4">採用候補者</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">ビジョンには共感されるが、実際の「働く手触り感」が伝わらず辞退される。</p>
+      </div>
+      <div class="p-8 bg-white border border-primary/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">handshake</span>
+        <h3 class="text-lg font-bold mb-4">取引先</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">方針は伝わるが、「譲れない一線」が共有されずトラブルが起きる。</p>
+      </div>
+      <div class="p-8 bg-white border border-primary/5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">trending_up</span>
+        <h3 class="text-lg font-bold mb-4">投資家</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">数字は納得されるが、「なぜあなたがやるのか」という必然性が伝わりきらない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAP VISUALIZATION ===== -->
+<section class="py-32 px-8 bg-surface">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-24">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+        経営者が見ている自分と、<br class="hidden md:block" />周囲が見ている自分は、違う。
+      </h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto">
+        これは能力の問題ではなく、構造の問題です。このギャップに気づかないまま「整理」しても、出てくるのは理想の自己像です。
+      </p>
+    </div>
+    <div class="max-w-5xl mx-auto relative px-4">
+      <!-- Venn Diagram -->
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-12 mb-20">
+        <div class="relative group">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/5 border border-primary/10 flex flex-col items-center justify-center p-8 text-center transition-all group-hover:bg-primary/10">
+            <span class="text-xs font-bold tracking-widest text-primary/40 mb-4 uppercase">Your Mind</span>
+            <p class="text-sm font-medium italic text-primary/80 leading-relaxed">「合理的に判断している」「ちゃんと説明している」「任せている」</p>
+            <div class="mt-4 text-[10px] font-bold text-primary/30 uppercase">Self-Perception</div>
+          </div>
+        </div>
+        <div class="relative">
+          <span class="material-symbols-outlined text-primary/20 text-5xl rotate-90 lg:rotate-0">sync_alt</span>
+          <div class="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">The Gap</div>
+        </div>
+        <div class="relative group">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-surface-container-high border border-outline-variant/30 flex flex-col items-center justify-center p-8 text-center transition-all group-hover:bg-surface-container-highest">
+            <span class="text-xs font-bold tracking-widest text-on-surface-variant/40 mb-4 uppercase">Team's Reality</span>
+            <p class="text-sm font-medium text-on-surface leading-relaxed">「直感で決めている」「結論だけ言われる」「急にひっくり返される」</p>
+            <div class="mt-4 text-[10px] font-bold text-on-surface-variant/30 uppercase">Others' Perception</div>
+          </div>
+        </div>
+      </div>
+      <!-- Scenario Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface-container-low p-8 rounded-2xl border border-primary/5">
+          <h4 class="font-bold text-xs text-primary/40 uppercase tracking-widest mb-6">Scenario 01</h4>
+          <div class="space-y-4">
+            <div class="text-sm text-on-surface-variant italic">「自分は合理的に判断している」</div>
+            <div class="w-full h-px bg-primary/10"></div>
+            <div class="text-sm font-bold">「直感で決めているように見える。根拠が共有されない」</div>
+          </div>
+        </div>
+        <div class="bg-surface-container-low p-8 rounded-2xl border border-primary/5">
+          <h4 class="font-bold text-xs text-primary/40 uppercase tracking-widest mb-6">Scenario 02</h4>
+          <div class="space-y-4">
+            <div class="text-sm text-on-surface-variant italic">「ちゃんと説明している」</div>
+            <div class="w-full h-px bg-primary/10"></div>
+            <div class="text-sm font-bold">「結論だけ言われて、思考プロセスが見えない」</div>
+          </div>
+        </div>
+        <div class="bg-surface-container-low p-8 rounded-2xl border border-primary/5">
+          <h4 class="font-bold text-xs text-primary/40 uppercase tracking-widest mb-6">Scenario 03</h4>
+          <div class="space-y-4">
+            <div class="text-sm text-on-surface-variant italic">「任せている」</div>
+            <div class="w-full h-px bg-primary/10"></div>
+            <div class="text-sm font-bold">「急にひっくり返される。いつ梯子を外されるかわからない」</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT IS SELF.MD ===== -->
+<section id="about" class="py-32 px-8 bg-surface-container-low/30">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+      <div>
+        <span class="uppercase tracking-[0.2em] text-primary font-bold block mb-6 text-xs">Our Approach</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter leading-tight mb-8">
+          経営者の"自己認識"と"周囲の認識"を突き合わせ、仕事で使える"説明の基盤"をつくる。
+        </h2>
+        <p class="text-lg text-on-surface-variant leading-relaxed mb-12">
+          self.md は単なるインタビューサービスではありません。経営者の頭の中にあるOSを抽出し、組織が使いこなせるプロトコルへと変換します。
+        </p>
+        <div class="space-y-12">
+          <!-- Step 1 -->
+          <div class="flex gap-8 items-start relative">
+            <div class="absolute left-6 top-12 bottom-0 w-px bg-primary/10 hidden md:block"></div>
+            <div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-lg shadow-primary/20 z-10">
+              <span class="material-symbols-outlined">forum</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mb-2">
+                <h4 class="font-bold text-xl">引き出す</h4>
+                <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold uppercase">Human</span>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">経営者本人への深掘りインタビュー + 共同創業者・幹部・社員への周囲インタビュー。AIには不可能な「行間」の抽出です。</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex gap-8 items-start relative">
+            <div class="absolute left-6 top-12 bottom-0 w-px bg-primary/10 hidden md:block"></div>
+            <div class="w-12 h-12 rounded-2xl bg-surface-container-high text-primary flex items-center justify-center shrink-0 border border-primary/10 z-10">
+              <span class="material-symbols-outlined">compare_arrows</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mb-2">
+                <h4 class="font-bold text-xl">ズレを見つける</h4>
+                <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold uppercase">Human</span>
+                <span class="text-[10px] bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-bold uppercase">AI</span>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">本人と周囲の認識を突き合わせ、ギャップを構造的に可視化。コーチングでもAIツールでもできない独自の分析です。</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex gap-8 items-start relative">
+            <div class="w-12 h-12 rounded-2xl bg-surface-container-high text-primary flex items-center justify-center shrink-0 border border-primary/10 z-10">
+              <span class="material-symbols-outlined">auto_awesome</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-3 mb-2">
+                <h4 class="font-bold text-xl">使える形にする</h4>
+                <span class="text-[10px] bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-bold uppercase">AI</span>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">発見したギャップを踏まえて、会議・採用・提案・社内共有でそのまま使える4つの出力を生成します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Flow Diagram -->
+      <div class="relative">
+        <div class="aspect-square bg-white border border-primary/5 rounded-[3rem] p-12 shadow-2xl flex items-center justify-center overflow-hidden">
+          <svg class="w-full h-full" viewBox="0 0 400 400">
+            <g transform="translate(40, 200)">
+              <circle r="40" fill="#0A2540" opacity="0.05" />
+              <text class="text-[12px] font-bold uppercase tracking-widest" fill="#0A2540" fill-opacity="0.4" text-anchor="middle" y="60">Chaos</text>
+              <circle cx="-10" cy="-5" r="4" fill="#0A2540" />
+              <circle cx="12" cy="8" r="6" fill="#0A2540" />
+              <circle cx="5" cy="-15" r="3" fill="#0A2540" />
+            </g>
+            <path d="M 80 200 Q 200 120 320 200" fill="none" stroke="#0A2540" stroke-width="1" stroke-dasharray="4 4" opacity="0.2" />
+            <path d="M 80 200 Q 200 280 320 200" fill="none" stroke="#0A2540" stroke-width="1" stroke-dasharray="4 4" opacity="0.2" />
+            <g transform="translate(200, 200)">
+              <circle r="60" fill="#0A2540" />
+              <text fill="white" text-anchor="middle" dominant-baseline="middle" class="text-[14px] font-bold">self.md</text>
+              <circle r="80" fill="none" stroke="#0A2540" stroke-width="1" opacity="0.1" />
+            </g>
+            <g transform="translate(360, 200)">
+              <rect x="-30" y="-30" width="60" height="60" rx="8" fill="#0A2540" opacity="0.05" />
+              <text class="text-[12px] font-bold uppercase tracking-widest" fill="#0A2540" fill-opacity="0.4" text-anchor="middle" y="60">Order</text>
+              <rect x="-10" y="-10" width="20" height="2" fill="#0A2540" />
+              <rect x="-10" y="-2" width="15" height="2" fill="#0A2540" />
+              <rect x="-10" y="6" width="18" height="2" fill="#0A2540" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4 OUTPUTS (Bento Grid) ===== -->
+<section id="outputs" class="py-32 px-8 bg-surface">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-20">
+      <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] block mb-4">Deliverables</span>
+      <h2 class="text-3xl font-bold tracking-tight">The Outputs</h2>
+      <p class="text-on-surface-variant mt-2">整理して終わりではなく、仕事でそのまま使える「武器」にする。</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <!-- Founder Brief (Large) -->
+      <div class="md:col-span-8 bg-surface-container-low rounded-3xl p-10 flex flex-col justify-between group overflow-hidden border border-primary/5 min-h-[400px]">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center mb-8">
+              <span class="material-symbols-outlined">auto_stories</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Founder Brief</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">経営者の"取扱説明書"。判断軸、思考の癖、強み、地雷を、本人の自己認識と周囲の認識を突き合わせた"実像"として一枚に整理します。</p>
+            <div class="mt-8 text-primary font-bold text-xs flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+              「この人にはこう話すと通る」がわかる資料 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </div>
+          <div class="hidden md:flex justify-center">
+            <svg class="svg-illustration" width="180" height="220" viewBox="0 0 180 220">
+              <rect x="20" y="20" width="140" height="180" rx="4" fill="white" stroke="#0A2540" stroke-width="0.5" />
+              <rect x="40" y="50" width="100" height="2" fill="#0A2540" opacity="0.2" />
+              <rect x="40" y="60" width="80" height="2" fill="#0A2540" opacity="0.2" />
+              <rect x="40" y="80" width="100" height="8" fill="#0A2540" opacity="0.1" />
+              <rect x="40" y="100" width="100" height="2" fill="#0A2540" opacity="0.2" />
+              <rect x="40" y="110" width="90" height="2" fill="#0A2540" opacity="0.2" />
+              <circle cx="40" cy="140" r="10" fill="#0A2540" />
+              <rect x="60" y="138" width="80" height="4" rx="2" fill="#0A2540" opacity="0.1" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Stakeholder Narrative (Dark) -->
+      <div class="md:col-span-4 bg-primary text-on-primary rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden min-h-[400px]">
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-white">campaign</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Stakeholder Narrative</h3>
+          <p class="text-on-primary/70 text-sm leading-relaxed">相手別の"翻訳シート"。採用・社員・取引先・投資家に、同じ中核を保ちながら伝わる言葉に変換。「言いがちだけど伝わらない表現」の対照表つき。</p>
+        </div>
+        <div class="relative z-10 mt-12">
+          <svg class="w-full" viewBox="0 0 200 100">
+            <path d="M 0 80 Q 50 10 100 60 T 200 20" fill="none" stroke="white" stroke-width="2" />
+            <circle cx="100" cy="60" r="4" fill="white" />
+          </svg>
+        </div>
+        <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+      </div>
+      <!-- Meeting Brief -->
+      <div class="md:col-span-6 bg-surface-container-high rounded-3xl p-10 flex flex-col justify-between border border-primary/5 min-h-[320px]">
+        <div class="flex justify-between items-start">
+          <div class="max-w-xs">
+            <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-8 shadow-sm">
+              <span class="material-symbols-outlined text-primary">chat_bubble</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Meeting Brief</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">会議前の"地雷マップ"。何がすれ違いそうか、どこで「言ったつもり」が発生しそうか。5分で読める事前整理メモ。</p>
+          </div>
+          <div class="hidden sm:block opacity-20">
+            <svg width="80" height="80" viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="35" fill="none" stroke="#0A2540" stroke-width="1" />
+              <path d="M 40 15 L 40 40 L 60 40" fill="none" stroke="#0A2540" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Project Premise -->
+      <div class="md:col-span-6 bg-[#E6E6E6] rounded-3xl p-10 flex flex-col justify-between border border-primary/5 min-h-[320px]">
+        <div class="flex justify-between items-start">
+          <div class="max-w-xs">
+            <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-8 shadow-sm">
+              <span class="material-symbols-outlined text-primary">bolt</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Project Premise</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">企画の"前提設計シート"。あなたの思考パターンに合った問題設定と価値訴求を、周囲がどう受け取るかも含めて設計。</p>
+          </div>
+          <div class="hidden sm:block opacity-20">
+            <svg width="80" height="80" viewBox="0 0 80 80">
+              <rect x="20" y="20" width="40" height="40" fill="none" stroke="#0A2540" stroke-width="1" transform="rotate(45 40 40)" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY NOT AI ===== -->
+<section class="py-32 px-8 bg-surface-container-low overflow-hidden">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
+    <div class="w-full md:w-1/2">
+      <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] block mb-6">Human Centric</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+        AIは道具。<br />self.mdの価値は<br />その手前にあります。
+      </h2>
+      <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+        ChatGPTに「自分の考えを整理して」と頼んだことはありませんか？AIは入力された情報の整理は得意です。でも、あなたが入力しなかった情報は整理できません。
+      </p>
+      <div class="p-8 bg-white rounded-2xl border border-primary/10 shadow-sm relative overflow-hidden">
+        <div class="relative z-10">
+          <p class="font-bold text-primary mb-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">verified</span>
+            The Human Advantage
+          </p>
+          <ul class="text-sm text-on-surface-variant leading-relaxed space-y-3">
+            <li class="flex items-start gap-2"><span class="text-primary/30 mt-0.5">&times;</span>あなたが気づいていない判断の癖</li>
+            <li class="flex items-start gap-2"><span class="text-primary/30 mt-0.5">&times;</span>周囲が感じているけど言えていないこと</li>
+            <li class="flex items-start gap-2"><span class="text-primary/30 mt-0.5">&times;</span>「伝わっている」と思い込んでいるズレ</li>
+          </ul>
+          <p class="text-sm text-on-surface-variant leading-relaxed mt-4">
+            これらはAIには見えません。人間が対話で引き出し、周囲の声と突き合わせ、そこで初めて見えた構造をAIで出力する。それがself.mdです。
+          </p>
+        </div>
+        <div class="absolute -right-4 -bottom-4 opacity-[0.03]">
+          <span class="material-symbols-outlined text-9xl">fingerprint</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 relative">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white p-2">
+        <!-- Abstract illustration instead of stock photo -->
+        <div class="rounded-[2.2rem] w-full h-[500px] bg-gradient-to-br from-primary/5 via-surface-container-low to-primary/10 flex items-center justify-center">
+          <svg class="w-64 h-64 text-primary/20" viewBox="0 0 200 200">
+            <circle cx="70" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="1" />
+            <circle cx="130" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="1" />
+            <text x="100" y="104" text-anchor="middle" class="text-[11px] font-bold" fill="#0A2540" fill-opacity="0.5">Gap</text>
+            <text x="50" y="70" text-anchor="middle" class="text-[8px]" fill="#0A2540" fill-opacity="0.3">SELF</text>
+            <text x="150" y="70" text-anchor="middle" class="text-[8px]" fill="#0A2540" fill-opacity="0.3">OTHERS</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO IS IT FOR ===== -->
+<section id="for-whom" class="py-32 px-8 bg-surface">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Who is it for?</h2>
+      <p class="text-on-surface-variant">こんな課題を感じているスタートアップ経営者のためにつくりました。</p>
+    </div>
+    <div class="grid gap-4">
+      <div class="flex items-center gap-6 p-8 bg-surface-container-low rounded-2xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
+        <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <p class="font-medium text-lg">組織が10〜50人になり、全員に直接話す限界を感じている</p>
+      </div>
+      <div class="flex items-center gap-6 p-8 bg-surface-container-low rounded-2xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
+        <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <p class="font-medium text-lg">採用面接で毎回同じ話をゼロからするのが重い</p>
+      </div>
+      <div class="flex items-center gap-6 p-8 bg-surface-container-low rounded-2xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
+        <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <p class="font-medium text-lg">「任せたい」のに、任せた結果にモヤモヤすることが増えた</p>
+      </div>
+      <div class="flex items-center gap-6 p-8 bg-surface-container-low rounded-2xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
+        <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <p class="font-medium text-lg">自分の判断に一貫性がある自信はあるが、周囲にはそう見えていない気がする</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process" class="py-32 px-8 bg-surface-container-low/50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-24">
+      <h2 class="text-3xl font-bold mb-4">Implementation Process</h2>
+      <p class="text-on-surface-variant">最短2週間で、あなたの組織に「言葉の基盤」を実装します。</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto relative">
+      <!-- Week 1 -->
+      <div class="relative p-12 bg-white rounded-[2rem] shadow-sm border border-primary/5 group hover:shadow-xl transition-all">
+        <span class="absolute -top-6 left-12 bg-primary text-on-primary px-8 py-2.5 rounded-full font-bold text-sm tracking-widest shadow-lg shadow-primary/20">WEEK 01</span>
+        <div class="mb-10 flex justify-between items-center">
+          <h3 class="text-2xl font-bold">Extraction &amp; Analysis</h3>
+          <span class="material-symbols-outlined text-primary/40 text-4xl">neurology</span>
+        </div>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Deep Interview</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">経営者本人への深掘りインタビュー（90分 × 2回）。思考のOSを可視化します。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Keyman Hearing</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">共同創業者・幹部・社員（3〜5名）への周囲インタビュー。認識のギャップを特定します。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Decision Archaeology</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">過去の意思決定事例を収集。言語化されていない判断パターンを抽出します。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Week 2 -->
+      <div class="relative p-12 bg-white rounded-[2rem] shadow-sm border border-primary/5 group hover:shadow-xl transition-all">
+        <span class="absolute -top-6 left-12 bg-primary text-on-primary px-8 py-2.5 rounded-full font-bold text-sm tracking-widest shadow-lg shadow-primary/20">WEEK 02</span>
+        <div class="mb-10 flex justify-between items-center">
+          <h3 class="text-2xl font-bold">Delivery &amp; Integration</h3>
+          <span class="material-symbols-outlined text-primary/40 text-4xl">deployed_code</span>
+        </div>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Gap Analysis</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">本人と周囲の認識を突き合わせ、ギャップを構造的に可視化・分析します。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Output Delivery</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">4つの成果物（Founder Brief / Meeting Brief / Stakeholder Narrative / Project Premise）を納品。</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+            <div>
+              <p class="font-bold text-sm mb-1">Feedback Session</p>
+              <p class="text-xs text-on-surface-variant leading-relaxed">経営者本人とギャップを共有し、対話を通じて修正・確定します。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTINUITY ===== -->
+<section class="py-32 px-8 bg-surface">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="text-3xl font-bold mb-4">一度つくって終わりではない。</h2>
+      <p class="text-on-surface-variant">経営者の考えは変わる。組織も変わる。だから、更新し続けます。</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-10 bg-surface-container-low rounded-2xl border border-primary/5">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">event_repeat</span>
+        <h3 class="text-lg font-bold mb-3">四半期更新</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">定期的な軽量チェック。考えの変化や組織の変化を反映します。</p>
+      </div>
+      <div class="p-10 bg-surface-container-low rounded-2xl border border-primary/5">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">rocket_launch</span>
+        <h3 class="text-lg font-bold mb-3">イベント更新</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">資金調達前、大型採用前、新規事業立ち上げ前に集中的に更新。</p>
+      </div>
+      <div class="p-10 bg-surface-container-low rounded-2xl border border-primary/5">
+        <span class="material-symbols-outlined text-primary text-3xl mb-6 block">monitoring</span>
+        <h3 class="text-lg font-bold mb-3">効果トラッキング</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">採用通過率、会議時間、社員理解度スコアを定期測定し改善。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section id="cta" class="py-32 px-8 bg-surface">
+  <div class="max-w-5xl mx-auto bg-primary text-on-primary rounded-[3rem] p-12 md:p-24 relative overflow-hidden text-center shadow-2xl">
+    <div class="relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-8">
+        まず、30分であなたの<br />"ギャップ"を覗いて<br class="md:hidden" />みませんか。
+      </h2>
+      <p class="text-white/60 mb-12 text-lg max-w-2xl mx-auto leading-relaxed">
+        無料の「ギャップ診断セッション」では、30分の対話を通じて、あなたの自己認識にどんなズレがありそうかを簡易的にフィードバックします。営業トークはしません。
+      </p>
+      <a href="#" class="inline-block bg-white text-primary px-12 py-6 rounded-full text-lg font-bold hover:bg-primary-container transition-all shadow-xl active:scale-[0.98]">
+        無料ギャップ診断を予約する
+      </a>
+      <p class="mt-8 text-white/30 text-xs font-bold uppercase tracking-[0.2em]">オンライン・30分・無料</p>
+    </div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-white/5 rounded-full blur-[100px]"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="w-full py-24 px-8 mt-auto bg-surface border-t border-primary/5">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
+    <div>
+      <div class="text-2xl font-extrabold text-primary mb-6 tracking-tighter">self.md</div>
+      <p class="text-on-surface-variant max-w-xs leading-relaxed text-sm">
+        考えはある。でも、伝わっていない。<br />
+        経営者の自己認識を、組織の武器に変える。
+      </p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+      <div class="flex flex-col gap-5">
+        <span class="font-bold text-primary text-xs uppercase tracking-widest">Product</span>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#about">Approach</a>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#outputs">Outputs</a>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#process">Process</a>
+      </div>
+      <div class="flex flex-col gap-5">
+        <span class="font-bold text-primary text-xs uppercase tracking-widest">Legal</span>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#">Terms of Service</a>
+      </div>
+      <div class="flex flex-col gap-5">
+        <span class="font-bold text-primary text-xs uppercase tracking-widest">Contact</span>
+        <a class="text-on-surface-variant hover:text-primary transition-all text-sm" href="#">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-24 pt-12 border-t border-primary/5 text-primary/30 text-[10px] font-bold uppercase tracking-widest">
+    &copy; 2025 self.md. Empowering Leaders Through Clarity.
+  </div>
+</footer>
+
+</body>
+</html>
